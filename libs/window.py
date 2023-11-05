@@ -1,7 +1,9 @@
 import customtkinter as CTk
 
 
-class Window:
-    def __init__(self, title="CustomTkinter"):
-        self = CTk.CTk()
-        self.title = str("Title")
+class Window(CTk.CTk):
+    def __init__(self, title="CustomTkinter", size='400x300', resizableX=True, resizableY=True):
+        super().__init__()
+        self.title(title)
+        self.geometry(str(size))
+        self.resizable(resizableX, resizableY)
