@@ -12,7 +12,7 @@ mainWindow = window.Window("Apple86 Reborn",
 
 """
 DON'T ADD PARENTHESIS ON COMMAND=function()
-
+    - ilsetronenazionalee
 """
 
 mainWindow.phase1 = CTk.CTkButton(mainWindow,
