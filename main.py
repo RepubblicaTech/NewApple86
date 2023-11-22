@@ -1,20 +1,40 @@
 import customtkinter as CTk
 import libs.window as window
-
-def log(text="Hello"):
-    print(text)
+from OC_Download.main import *
 
 CTk.set_appearance_mode("System")  # Modes: system (default), light, dark
 CTk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
 
 mainWindow = window.Window("Apple86 Reborn",
-                           '600x300',
+                           '620x150',
                            False,
                            False)
 
-mainWindow.button = CTk.CTkButton(mainWindow,
-                                  text='OMOa',
-                                  command=lambda: log('Button was clicked')).grid(padx=20,
-                                                                                  pady=20)
+"""
+DON'T ADD PARENTHESIS ON COMMAND=function()
+
+"""
+
+mainWindow.phase1 = CTk.CTkButton(mainWindow,
+                                  text='Download OpenCore',
+                                  command=Stage1)
+mainWindow.phase1.grid(row=0,
+                       column=0,
+                       padx=20,
+                       pady=20)
+
+mainWindow.phase2 = CTk.CTkButton(mainWindow,
+                                  text='Download Drivers, Kexts and SSDTs').grid(row=0,
+                                                                                 column=1,
+                                                                                 padx=20,
+                                                                                 pady=20)
+
+mainWindow.phase3 = CTk.CTkButton(mainWindow,
+                                  text='Setup config.plist').grid(row=0,
+                                                                  column=2)
+
+mainWindow.phase4 = CTk.CTkButton(mainWindow,
+                                  text='Advanced configuration').grid(row=1,
+                                                                  column=1)
 
 mainWindow.mainloop()
