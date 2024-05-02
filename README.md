@@ -1,3 +1,5 @@
+# May 2024 UPDATE: since the hackintosh scene has been dying lately due to intel Macs starting to lose support for newer macOS versions (i'd say future macOS 15 and above), i may won't be actively developing this project from today onwards.
+
 # NewApple86
 
 Apple86. Reborn.
